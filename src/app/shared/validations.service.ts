@@ -46,10 +46,10 @@ export class ValidationsService {
         return { 'minlength': true };
     }
 
-    if (control.value.length > 12) {
+    if (control.value.length > 30) {
         return { 'maxlength': true };
     }
-    const valid = /^[a-zA-Z0-9_.-]*$/.test(control.value);
+    const valid = true
     if (valid) {
         return null;
     }
