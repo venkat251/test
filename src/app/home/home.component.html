@@ -1,0 +1,51 @@
+
+
+<section id="home" class="intro intro-bg bg-overlay parallax" style="height:520px;">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-md-12 caption-two-panel ml-auto pt-5 ">
+          <div class="login" >
+            <div class="mat-elevation-z24">
+
+              <mat-card class="login-form ">
+
+                  <h5 class="account-login"> ACCOUNT LOGIN </h5>
+                  <form [formGroup]="loginForm" (ngSubmit) ="login(loginForm.value)" autocomplete="off">
+                      <div class="example-container">
+                          <mat-form-field>
+                            <input matInput type="text" formControlName="userName"  placeholder="User Name" autofocus required  />
+                            <mat-icon matSuffix >face</mat-icon>
+                            <mat-error>
+                                <span *ngIf="loginForm.get('userName').hasError('required')">User Name is Required...! </span>
+                                <span *ngIf="loginForm.get('userName').hasError('minlength')">Minimum 6 characters is Required...!  </span>
+                                <span *ngIf="loginForm.get('userName').hasError('maxlength')">Maximum 12 characters Only...!</span>
+                            </mat-error>
+                          </mat-form-field>
+                           <mat-form-field>
+                              <input matInput formControlName="password"   placeholder="Password" [type]="hide ? 'password' : 'text'"  required />
+                                 <mat-icon matSuffix (click)="hide = !hide">{{hide? 'visibility_off' : 'visibility'}}</mat-icon>
+                                 <mat-error>
+                                    <span *ngIf="loginForm.get('password').hasError('required')" >Password is Required...!</span>
+                                    <span *ngIf="loginForm.get('password').hasError('patternStrong')">InValid Password...!</span>
+                                    <span *ngIf="loginForm.get('password').hasError('minlength')">Minimum 8 characters is Required...!</span>
+                                    <span *ngIf="loginForm.get('password').hasError('maxlength')">Maximum 14 characters Only...!</span>
+                                </mat-error>
+                          </mat-form-field>
+                          <button type="submit" class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" >Sign in</button>
+                        </div>
+
+                  </form>
+              </mat-card>
+              </div>
+              <p class="text-center text-muted small">Don't have an account? <a (click)="route()"  class="btn signup" style="color: rgb(20, 107, 238);"  >Sign up here!</a></p>
+            </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+

@@ -1,0 +1,158 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "../node_modules/ng2-slim-loading-bar/style.css";
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #333;
+}
+
+.submit-button {
+    background-color: #2f8bbd;
+    color:#fff;
+}
+.register-background-color {
+    background-color: #f5f5f5;
+    padding-bottom: 20px;
+}
+.card-header{
+    color: #fff;
+    background: steelblue;
+    font-family: 'Open Sans', sans-serif;
+}
+.mat-card {
+    border: 1px solid #D1D1D1;
+    border-radius: 16px;
+    /* background: #F6F5F2; */
+    box-shadow: 1px 1px 4px rgba(0,0,0,.15);
+    font-family: 'Open Sans', sans-serif;
+  }
+
+.card-header .fas {
+    float: left;
+    padding-top: 8px;
+}
+.user-header .fas {
+    float: left;
+    padding-top: 8px;
+    outline: none;
+    color: #2f8bbd;
+}
+
+/* color for snackbar */
+.background-red{
+  background-color: rgb(238, 22, 62);
+}
+.background-green{
+  background-color: rgb(0, 160, 48);
+  top: 50px;
+}
+.blue-snackbar {
+  background: #2196F3;
+}
+.green-snackbar {
+  background: #1DE9B6;
+}
+.red-snackbar {
+  background: rgb(238, 22, 62);
+}
+/* End of color for snackbar */
+
+/* summary page style  start*/
+.summary-heading {
+    padding: 8px 16px;
+    color: #2f8bbd;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+.list-group-item strong {
+    color: currentColor;
+}
+.heading-pharmacy {
+    font-weight: bold;
+    color:#2f8bbd ;
+    font-family: 'Open Sans', sans-serif;
+}
+.summary-number {
+    font-size: 15px;
+    padding-left: 15px;
+    font-weight: 100;
+    font-family: 'Open Sans', sans-serif;
+}
+.summary-mobile {
+    padding-left: 0px;
+    font-family: 'Open Sans', sans-serif;
+}
+.information-data {
+    margin-bottom: 0px;
+    padding-top: 22px;
+    color: #b3b3b3;
+}
+/* summary page style end */
+button:focus {
+    outline: 1px dotted;
+    outline: none;
+}
+.modal-backdrop {
+    position: inherit;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: #000;
+}
+:focus {
+    outline: none;
+}
+.mat-menu-panel {
+    background-color: #015c7d;
+  }
+  .cdk-overlay-pane {
+    position: absolute;
+    pointer-events: auto;
+    box-sizing: border-box;
+    z-index: 1000;
+    display: flex;
+    margin-top: 28px;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .mat-sort-header-arrow {
+    color: #fff;
+}
+.no-data {
+    text-align: center;
+    padding: 10px;
+}
+.mat-tab-label, .mat-tab-link {
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+  }
+.mt-25{
+    margin-top: 25px;
+}
+.mt-10 {
+    margin-top: 10px;
+}
+.scrollbar {	
+	/* float: left;	 */
+	overflow-y: scroll;	
+}
+#table-scroll::-webkit-scrollbar-track {
+	border-radius: 10px; }
+
+#table-scroll::-webkit-scrollbar {
+	width: 8px;
+    background-color: #F5F5F5;
+    border-radius: 10px; 
+}
+
+#table-scroll::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+    background-color: steelblue;	
+    border-radius: 10px; 
+}

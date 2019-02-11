@@ -1,0 +1,98 @@
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 2 2 auto;
+}
+
+.main-nav {
+  background-color: #056d93;
+  height: 35px;
+  color: white;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0; /* Sets the sticky toolbar to be on top */
+  z-index: 100; /* Ensure that your app's content doesn't overlap the toolbar */
+}
+.menu-nav{
+  background-color: #015c7d;
+  height:15px;
+  color:white;
+   /* position:sticky; */
+  /* position: -webkit-sticky; */
+  top: 0; /* Sets the sticky toolbar to be on top */
+  z-index: 100; /* Ensure that your app's content doesn't overlap the toolbar */
+  font-size:12px;
+}
+/* .fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%  !important;
+}  */
+.loader {
+  color:blue;
+  width:30px;
+}
+.mat-toolbar-multiple-rows {
+  min-height: 25px;
+  font-size: 14px;
+}
+ng-container{
+  height:35px
+}
+button {
+  font-size:14px;
+}
+.mat-menu-item {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  outline: 0;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  line-height: 0px;
+  height: 28px;
+  color: #fff;
+  padding: 0 16px;
+  text-align: left;
+  text-decoration: none;
+  max-width: 100%;
+  position: relative;
+}
+.mat-menu-item-submenu-trigger::after {
+  width: 0;
+  height: 0;
+  color: white;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-color: transparent transparent transparent currentColor;
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 51%;
+  right: 16px;
+  transform: translateY(-50%);
+}
+.mat-menu-content {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.mat-button{
+  color:#fff;
+  position: unset;
+}
+.provider-facility-name {
+  padding-top: 15px;
+}
+
+
+

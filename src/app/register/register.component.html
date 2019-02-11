@@ -1,0 +1,103 @@
+
+<!-- <p>{{ErrorMsg}}</p> -->
+
+   <div class="register-background-color">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 registration-form">
+                 <mat-card>
+                    <mat-card-title  class="text-center user-header" >  Registration  
+                    </mat-card-title>
+                    <form   autocomplete="off" [formGroup]="RegisterForm" (ngSubmit)="OnSubmitRegistration(RegisterForm.value)">
+<div>
+        <div class="mb-20" fxFlex fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px">
+                <div [fxFlex]="40" class="form-input">
+                    <mat-form-field>
+                                <input matInput placeholder="User Name" formControlName="userName"  (keypress)="omit_special_char($event)" required  />
+                                <mat-error>
+                                    <span *ngIf="RegisterForm.get('userName').hasError('required')">User Name is Required...! </span>
+                                    <span *ngIf="RegisterForm.get('userName').hasError('minlength')">Minimum 8 characters is Required...! </span>
+                                    <span *ngIf="RegisterForm.get('userName').hasError('maxlength')">Maximum 32 characters Only...! </span>
+            
+                                </mat-error>
+                    </mat-form-field>
+                    <mat-form-field>
+                            <input matInput placeholder="Email" formControlName="email"  required />
+                            <mat-error>
+                                <span *ngIf="RegisterForm.get('email').hasError('required')"> Email is Required...! </span>
+                                <span *ngIf="RegisterForm.get('email').hasError('pattern')">Please enter valid Email</span>
+                            </mat-error>
+                     </mat-form-field>
+                     <mat-form-field>
+                            <input matInput placeholder="Phone Number" #input maxlength="10" formControlName="phoneNumber"
+                             onkeypress='return event.charCode >= 48 && event.charCode <= 57'   required/>
+                             <mat-hint align="end">{{input.value?.length || 0}}/10</mat-hint>
+                            <mat-error>
+                                <span *ngIf="RegisterForm.get('phoneNumber').hasError('required')"> Mobile Number is Required...! </span>
+                                <span *ngIf="RegisterForm.get('phoneNumber').hasError('pattern')">Please enter the proper format...!</span>
+                                <span *ngIf="RegisterForm.get('phoneNumber').hasError('minlength')">Please enter 10 digits...!</span>
+                                <span *ngIf="RegisterForm.get('phoneNumber').hasError('maxlength')">Please enter 10 digits...!</span>
+                              </mat-error>
+                     </mat-form-field>                 
+    </div>
+
+    <div [fxFlex]="50" class="form-input">
+             <mat-form-field>
+                    <input matInput placeholder="Password" type="password" formControlName="password"  required />
+                    <mat-error>
+                        <span *ngIf="RegisterForm.get('password').hasError('required')">password is Required...! </span>
+                        <span *ngIf="RegisterForm.get('password').hasError('minlength')">Minimum 8 characters is Required...! </span>
+                        <span *ngIf="RegisterForm.get('password').hasError('maxlength')">Maximum 14 characters Only...! </span>
+                        <span *ngIf="RegisterForm.get('password').hasError('patternStrong')"> Sample pattern... <b> Some@123</b> </span>
+                      </mat-error>
+             </mat-form-field>
+             <mat-form-field>
+                    <input matInput placeholder="Confirm Password" type="password" formControlName="confirmPassword" required  />
+                    <mat-error>
+                        <span *ngIf="RegisterForm.get('confirmPassword').hasError('required')">Confirm Password is Required...! </span>
+                        <span *ngIf="RegisterForm.get('confirmPassword').hasError('notMatch')">Password Mismatch</span>
+                      </mat-error>
+             </mat-form-field>
+                </div>
+                <div [fxFlex]="40" class="form-input">
+                        <mat-form-field>
+                               <input matInput placeholder="Address Line 1" formControlName="addressLine1"  required />
+                               <mat-error>
+                                   <span *ngIf="RegisterForm.get('addressLine1').hasError('required')">Address is Required...! </span>
+                               </mat-error>
+                        </mat-form-field>
+                        <mat-form-field>
+                               <input matInput placeholder="Address Line 2" formControlName="addressLine2">
+                        </mat-form-field>
+                </div>
+</div>
+
+
+</div>
+                            <div class="row form-input">
+                                    <div class="col-md-4">
+                                    </div>
+                                    <div class="col-md-4">
+                                    </div>
+                                    <div class="col-md-4">
+                                   </div>
+
+                           </div>
+
+                           <div class="row">
+                                <div class="col-md-12 text-center">
+                                <button type="submit" [disabled]="!RegisterForm.valid"  mat-raised-button class="submit-button btn-lg"  >Save</button>
+                            </div>
+                          </div>
+
+
+                </form>
+                 </mat-card>
+         </div>
+     </div>
+</div>
+</div>
+
+
+
